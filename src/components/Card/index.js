@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text } from 'react-native';
 import Pattern from '../Pattern';
+import Details from '../Details';
 import { connect } from 'react-redux';
 
 class Card extends React.Component {
@@ -25,6 +26,9 @@ class Card extends React.Component {
                 <View style={styles.patternBox}>
                     <Pattern beats={this.props.data.beats}/>
                 </View>
+                <View style={styles.details}>
+                    <Details bpm={'122'} genre={'Techno'} song={'Sexual Healing - Martin Gaye'}/>
+                </View>
             </View>
         )
     }
@@ -34,14 +38,13 @@ class Card extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#FFC0CB'
+        paddingBottom: 25
     },
     userHeader: {
         flexDirection: 'row',
         padding: 10
     },
     userName: {
-      backgroundColor: '#ffc966',
       paddingTop: 15,
       paddingLeft: 15,
       fontSize: 18
@@ -51,9 +54,8 @@ const styles = StyleSheet.create({
       height: 50,
       borderRadius: 25
     },
-    patternBox: {
-      backgroundColor: '#00ffa5'
-    },
+    patternBox: {},
+    details: {}
   });
   
   const mapStateToProps = state => {

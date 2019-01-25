@@ -28,7 +28,7 @@ class Pattern extends React.Component {
 
     renderSteps(beats) {
         if(beats !== undefined) {
-            return beats.map( (step, index) => <Step key={Math.random().toString(36).substr(2, 9)}/>)
+            return beats.map( (step, index) => <Step beat={step} key={Math.random().toString(36).substr(2, 9)}/>)
         } else {
             return null;
         }
@@ -51,26 +51,22 @@ class Pattern extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#FFC0CB',
       flexDirection: 'row',
       alignItems: 'stretch'
     },
     abbrs: {
-        flex: 1,
-        backgroundColor: '#000'
+        flex: 1
     },
     abbrsText: {
-        color: '#fff',
+        color: '#666',
         padding: 5
     },
     tracks: {
         flexDirection: 'row',
-        backgroundColor: '#ffede0',
         height: 27
     },
     patterns: {
-        flex: 9,
-        backgroundColor: '#fff'
+        flex: 9
     }
   });
 

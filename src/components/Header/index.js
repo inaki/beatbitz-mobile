@@ -22,26 +22,26 @@ export default class Header extends React.Component {
 
 const styles = StyleSheet.create({
     header: {
-      height: 100,
+      height: 90,
       flexDirection: 'row',
       justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#f6f6f6',
+      alignItems: 'center'
     },
     logo: {
         height: 90,
-        alignSelf: 'center',
+        alignSelf: 'center'
     },
     logoContainer:{
-      flex: 1,
-      height: 100,
-      width: 250,
-      backgroundColor: 'red'
+
+        height: 90,
+        width: 220,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        overflow: 'hidden',
     },
     sidebarIcon: {
       width: 75,
-      height: 100,
-      backgroundColor: 'blue'
+      height: 100
     }
   });
   
